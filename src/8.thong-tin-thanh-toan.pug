@@ -1,0 +1,111 @@
+extends includes/layouts/Guest.pug
+
+block pages
+    .container
+        include ./includes/components/Breadcrumb.pug
+        .Bill-total-wrapper.fixed-bottom
+          .Bill-total.big
+            p.Bill-total-title Tổng tiền:
+            p.Bill-total-price
+              span 311.500đ
+              span.Bill-total-price-unit đ
+            button.btn.btn-orange-brand.w-100 Mua ngay
+        .row
+            .col-lg-8
+                section
+                .row
+                    .col-12
+                        include ./includes/containers/Payment.pug
+                    .col-12
+                        include ./includes/containers/PaymentMethod.pug
+                    .col-12
+                        +Cart({method: true})
+            .col-lg-4
+                    aside
+                        +Bill({method: true})
+        section.top-sale.mt-theme-30
+            .container
+                .row
+                    .col-12
+                        +HeadingCard({
+                        title: "Gợi ý cho bạn",
+                        className: 'justify-content-between mt-theme-6 mb-theme-6',
+                        isViewAll: true
+                        })
+                    .col-12
+                        #carouselFlashSale01.owl-carousel.mobile-disable-carousel
+                            .item
+                                +CardComponent({
+                                url: './assets/images/image-book-thumbnail.png',
+                                title: 'Làm Chủ Cơn Giận',
+                                description: 'Tác giả',
+                                classTitle: 'mt-theme-4 mb-theme-4',
+                                isRate: true,
+                                price: true,
+                                footer: true,
+                                isSale: true,
+                                classModify: "style2",
+                                classModifyImage: 'resize-card'
+                                })
+                            .item
+                                +CardComponent({
+                                url: './assets/images/image-book-thumbnail-1.png',
+                                title: 'Làm Chủ Cơn Giận',
+                                description: 'Tác giả',
+                                classTitle: 'mt-theme-4 mb-theme-4',
+                                isRate: true,
+                                price: true,
+                                footer: true,
+                                  classModify: "style2",
+                                  classModifyImage: 'resize-card'
+                                })
+                            .item
+                                +CardComponent({
+                                url: './assets/images/image-book-thumbnail-2.png',
+                                title: 'Làm Chủ Cơn Giận',
+                                description: 'Tác giả',
+                                classTitle: 'mt-theme-4 mb-theme-4',
+                                isRate: true,
+                                price: true,
+                                footer: true,
+                                  classModify: "style2",
+                                  classModifyImage: 'resize-card'
+                                })
+                            .item
+                                +CardComponent({
+                                url: './assets/images/image-book-thumbnail-3.png',
+                                title: 'Làm Chủ Cơn Giận',
+                                description: 'Tác giả',
+                                classTitle: 'mt-theme-4 mb-theme-4',
+                                isRate: true,
+                                price: true,
+                                footer: true,
+                                  classModify: "style2",
+                                  classModifyImage: 'resize-card'
+                                })
+                            .item
+                                +CardComponent({
+                                url: './assets/images/image-book-thumbnail-3.png',
+                                title: 'Làm Chủ Cơn Giận',
+                                description: 'Tác giả',
+                                classTitle: 'mt-theme-4 mb-theme-4',
+                                isRate: true,
+                                price: true,
+                                footer: true,
+                                isSale: true,
+                                  classModify: "style2",
+                                  classModifyImage: 'resize-card'
+                                })
+                            .item
+                                +CardComponent({
+                                url: './assets/images/image-book-thumbnail.png',
+                                title: 'Làm Chủ Cơn Giận',
+                                description: 'Tác giả',
+                                classTitle: 'mt-theme-4 mb-theme-4',
+                                isRate: true,
+                                price: true,
+                                footer: true,
+                                isSale: true,
+                                  classModify: "style2",
+                                  classModifyImage: 'resize-card'
+                                })

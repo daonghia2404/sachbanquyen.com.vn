@@ -1,0 +1,44 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .container
+     div.border-breadcrumb
+       include ./includes/components/Breadcrumb.pug
+     .row
+       .col-lg-9
+         section
+           .row
+             .col-12
+                include ./includes/containers/NewsDetail.pug
+                include ./includes/components/Comment.pug
+       .col-lg-3
+            aside
+                 +ListGroupComponent({ isAccordion:true, name:"CHỦ ĐỀ", className:'d-lg-block d-none' })
+                 div.News-category-wrapper
+                   +HeadingCard({
+                     title: "Danh mục tin",
+                     className: 'h-4-heading-card Category-title mt-theme-15 mb-theme-15',
+                     isViewAll: false
+                   })
+                   ul.News-category-mobile.d-flex.mb-0.scroll-mobile
+                     li.News-category-mobile-item
+                       a(href="").News-category-mobile-item-link Tin tức
+                     li.News-category-mobile-item
+                       a(href="").News-category-mobile-item-link Điểm sách
+                     li.News-category-mobile-item
+                       a(href="").News-category-mobile-item-link Khuyến mại
+                     li.News-category-mobile-item
+                       a(href="").News-category-mobile-item-link Khuyến mại
+                     li.News-category-mobile-item
+                       a(href="").News-category-mobile-item-link Khuyến mại
+                 .list-news
+                    h3.list-news-title Tin nổi bật
+                    each item in [1,2,3,4]
+                      a(href="18.1.Tin-tức.html").CardNewsComponent.card-small
+                        .CardNewsComponent-image
+                          img(src="./assets/images/image-card-news-2.png", alt="", srcset="")
+                        .CardNewsComponent-body.text-center
+                          h3.CardNewsComponent-body-title Phiên vận chuyển sách giấy dịp tết nguyên đán 2021
+                          p.CardNewsComponent-body-description.mb-0 Do nhu cầu vận chuyển và số lượng đơn hàng từ các ...
+                    a(href="#").list-news-item.text-center
+                        | Xem thêm
