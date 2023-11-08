@@ -64,9 +64,14 @@
     }
 
     .btn-outline-primary {
+      &:hover {
+        color: var(--bs-btn-active-bg);
+        background-color: rgba(#2F69FD, 0.1);
+      }
+
       &:active {
         color: var(--bs-btn-active-bg);
-        background-color: var(--white);
+        background-color: rgba(#2F69FD, 0.2);
       }
     }
   }
@@ -121,6 +126,14 @@
             border: none;
             background: rgba(#a4a4a4, 0.05);
             color: var(--Icon, #54555b);
+
+            &:hover {
+              background: rgba(#a4a4a4, 0.1);
+            }
+            
+            &:active {
+              background: rgba(#a4a4a4, 0.2);
+            }
           }
         }
       }

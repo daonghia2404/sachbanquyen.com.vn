@@ -6,6 +6,14 @@ header {
   z-index: 999;
 
   .dropdown {
+    &:hover>.dropdown-menu {
+      position: absolute;
+      inset: 0px auto auto 0px;
+      margin: 0px;
+      transform: translate3d(-96px, 40px, 0px);
+      display: block;
+    }
+
     .dropdown-menu {
       padding: 0;
       background: var(--white);
@@ -18,9 +26,14 @@ header {
       .btn-outline-danger {
         white-space: nowrap;
 
+        &:hover {
+          color: var(--bs-btn-active-border-color);
+          background-color: rgba(#dc3545, 0.1);
+        }
+
         &:active {
           color: var(--bs-btn-active-border-color);
-          background-color: var(--white);
+          background-color: rgba(#dc3545, 0.2);
         }
       }
 
@@ -37,7 +50,7 @@ header {
           background: var(--line3);
         }
 
-        & > span {
+        &>span {
           flex: 0 0 16px;
           max-width: 16px;
           width: 16px;
@@ -170,7 +183,7 @@ header {
                 .number-cart {
                   position: absolute;
                   top: -4px;
-                  left: 15px;
+                  right: 15px;
                   width: 16px;
                   height: 16px;
                   background: var(--badge);

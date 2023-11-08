@@ -101,12 +101,17 @@
   }
 
   &-footer {
-    padding: 4px 0;
+    padding: 4px;
 
     .btn-outline-danger {
+      &:hover {
+        color: var(--bs-btn-active-border-color);
+        background-color: rgba(#dc3545, 0.1);
+      }
+
       &:active {
         color: var(--bs-btn-active-border-color);
-        background-color: var(--white);
+        background-color: rgba(#dc3545, 0.2);
       }
     }
   }

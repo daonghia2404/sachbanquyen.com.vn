@@ -14,14 +14,14 @@ header
               span HotLine
               a(href="#").d-block 0904506621
           .header-top-wrapper-action-item
-            a(href="#").header-top-wrapper-action-item-text.cart
+            a(href="#").header-top-wrapper-action-item-text.cart.d-flex.flex-column.align-items-center
                img(src="./assets/icons/shopping-cart.svg" alt="#")
                span Giỏ hàng
                span.number-cart 5
 
-          .dropdown
-            .header-top-wrapper-action-item(data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 15px;")
-              a(href="#").header-top-wrapper-action-item-text
+          .dropdown(onclick="preventDefault()")
+            .header-top-wrapper-action-item(style="padding-left: 15px;")
+              a(href="#").header-top-wrapper-action-item-text.d-flex.flex-column.align-items-center
                 .header-top-wrapper-action-item-text-avatar
                   if (isLogged)
                     img(src="./assets/icons/profile-circle-active.svg" alt="#")
