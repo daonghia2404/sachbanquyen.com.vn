@@ -31,7 +31,7 @@ const carousel = {
       $("#big").owlCarousel({
         items: 1,
         loop: true,
-        margin: 10,
+        margin: 0,
         nav: false,
         dots: false,
       });
